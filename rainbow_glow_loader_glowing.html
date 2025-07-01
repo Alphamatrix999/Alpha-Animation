@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rainbow Glow Loader</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid transparent;
+      border-top: 10px solid #fff;
+      animation: spin 1s linear infinite, rainbow 3s linear infinite;
+      box-shadow: 0 0 20px red,
+                  0 0 40px orange,
+                  0 0 60px yellow,
+                  0 0 80px green,
+                  0 0 100px blue,
+                  0 0 120px indigo,
+                  0 0 140px violet;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes rainbow {
+      0% { border-top-color: red; box-shadow: 0 0 20px red; }
+      16% { border-top-color: orange; box-shadow: 0 0 20px orange; }
+      33% { border-top-color: yellow; box-shadow: 0 0 20px yellow; }
+      50% { border-top-color: green; box-shadow: 0 0 20px green; }
+      66% { border-top-color: blue; box-shadow: 0 0 20px blue; }
+      83% { border-top-color: indigo; box-shadow: 0 0 20px indigo; }
+      100% { border-top-color: violet; box-shadow: 0 0 20px violet; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+</body>
+</html>
